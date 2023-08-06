@@ -1,53 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 html {
   font-size: 62.5%;
 }
 * {
-  margin: 0;
-  padding: 0;
+  padding: 0%;
+  margin: 0%;
   box-sizing: border-box;
 }
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-.container {
-  background-color: lightgrey;
-
-  height: 200px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.grid-container {
+  border-radius: 10px;
+  padding: 4rem;
+  background-color: #f0f1f3;
+  width: fit-content;
+  display: grid;
+  gap: 2rem 2rem;
+  grid-template: repeat(3, 50px) / repeat(3, 200px);
 }
 .btn {
-  text-decoration: none;
-  color: inherit;
+  text-transform: capitalize;
+  font-size: 14px;
   gap: 1rem;
-  display: flex;
+  text-decoration: none;
+  background-color: #ffffff;
   align-items: center;
+  display: flex;
   justify-content: center;
-  border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid #183153;
-  padding: 1rem;
-  margin: 0.6rem;
-  box-shadow: 0 3px 0 #183153;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 rgb(170, 164, 164);
 }
-.btn-0 {
-  font-size: 1rem;
-  width: 11rem;
-  background-color: #f8f9fa;
+.color-text {
+  color: #9c36b5;
 }
-.btn-1 {
-  background-color: #e7b916;
-  font-size: 1rem;
+.color-text1 {
+  color: #0ca678;
 }
-.btn-0:hover {
-  background-color: #cbdef2;
-  box-shadow: 0 3px 0 #183153;
+.color-text2 {
+  color: inherit;
 }
-.btn-1:hover {
-  background-color: rgb(235, 144, 41);
-  box-shadow: 0 3px 0 #183153;
+.grid-container :nth-child(1):hover,
+:nth-child(4):hover,
+:nth-child(7):hover {
+  box-shadow: 0 3px 0 rgb(82, 161, 241);
+  border: 1px solid rgb(82, 161, 241);
+}
+.grid-container :nth-child(2):hover,
+:nth-child(5):hover,
+:nth-child(8):hover {
+  box-shadow: 0 3px 0 #cf75e5;
+  border: 1px solid#cf75e5;
+}
+.grid-container :nth-child(3):hover,
+:nth-child(6):hover,
+:nth-child(9):hover {
+  box-shadow: 0 3px 0 #59e4bb;
+  border: 1px solid#59e4bb;
+}
+.grid-container .color-text2 i {
+  color: dodgerblue;
 }
